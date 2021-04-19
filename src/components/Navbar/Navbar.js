@@ -42,8 +42,8 @@ function Navbar() {
         <Nav>
           <NavbarContainer>
             <NavLogo to='/' onClick={closeMobileMenu}>
-              <NavIcon />
-              ULTRA
+              <img src="https://img.icons8.com/cotton/64/000000/online-order.png"/>
+              SHOP
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}

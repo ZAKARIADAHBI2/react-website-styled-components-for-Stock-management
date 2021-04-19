@@ -27,7 +27,7 @@ function Pricing() {
         <PricingWrapper>
           <PricingHeading>Our Services</PricingHeading>
           <PricingContainer>
-            <PricingCard to='/sign-up'>
+            <PricingCard to='#'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiRock />
@@ -43,7 +43,7 @@ function Pricing() {
                 <Button primary>Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+            <PricingCard to='#'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCrystalBars />
@@ -59,7 +59,7 @@ function Pricing() {
                 <Button primary>Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+            <PricingCard to='#'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCutDiamond />
@@ -75,6 +75,7 @@ function Pricing() {
                 <Button primary>Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
+            
           </PricingContainer>
         </PricingWrapper>
       </PricingSection>

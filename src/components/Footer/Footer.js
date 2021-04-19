@@ -45,7 +45,7 @@ function Footer() {
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to='/sign-up'>How it works</FooterLink>
+            <FooterLink to='/'>How it works</FooterLink>
             <FooterLink to='/'>Testimonials</FooterLink>
             <FooterLink to='/'>Careers</FooterLink>
             <FooterLink to='/'>Investors</FooterLink>
@@ -79,10 +79,11 @@ function Footer() {
       <SocialMedia>
         <SocialMediaWrap>
           <SocialLogo to='/'>
-            <SocialIcon />
-            ULTRA
+          <img src="https://img.icons8.com/cotton/64/000000/online-order.png"/>
+
+            SHOP
           </SocialLogo>
-          <WebsiteRights>ZAKARIA DAHBI PFE ESTF © 2020</WebsiteRights>
+          <WebsiteRights>ZAKARIA DAHBI PFE ESTF © 2021</WebsiteRights>
           <SocialIcons>
             <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
               <FaFacebook />

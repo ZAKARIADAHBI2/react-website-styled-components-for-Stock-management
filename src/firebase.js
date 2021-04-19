@@ -1,62 +1,61 @@
-import firebase from "firebase/app";
+import firebase from "firebase";
 import "firebase/auth";
 import "firebase/database";
 import "firebase/firestore";
 
 
-const firebaseConfig = {
-    apiKey: "AIzaSyARQLyIRvLGR6Tze_fc8vKc5f4vFwg1UMs",
-    authDomain: "pfe-estf.firebaseapp.com",
-    databaseURL: "https://pfe-estf-default-rtdb.firebaseio.com",
-    projectId: "pfe-estf",
-    storageBucket: "pfe-estf.appspot.com",
-    messagingSenderId: "1096888098127",
-    appId: "1:1096888098127:web:8d12b0932fe0781788f93a",
-    measurementId: "G-4FVE0E2TSS"
+let firebaseConfig = {
+  apiKey: "AIzaSyCpKFRdT76OohQDxLTBZO-4qL_9_iyP6ZQ",
+  authDomain: "reactcrud-aa601.firebaseapp.com",
+  projectId: "reactcrud-aa601",
+  storageBucket: "reactcrud-aa601.appspot.com",
+  messagingSenderId: "344376927878",
+  appId: "1:344376927878:web:351d2ab0cb942ae0b71307"
   };
-  firebase.initializeApp(firebaseConfig);
 
-  export const auth = firebase.auth();
-  export const firestore = firebase.firestore();
-  
-  const provider = new firebase.auth.GoogleAuthProvider();
-  export const signInWithGoogle = () => {
-    auth.signInWithPopup(provider);
-  };
-  
-  export const generateUserDocument = async (user, additionalData) => {
-    if (!user) return;
-  
-    const userRef = firestore.doc(`users/${user.uid}`);
-    const snapshot = await userRef.get();
-  
-    if (!snapshot.exists) {
-      const { email, displayName, photoURL } = user;
-      try {
-        await userRef.set({
-          displayName,
-          email,
-          photoURL,
-          ...additionalData
-        });
-      } catch (error) {
-        console.error("Error creating user document", error);
-      }
-    }
-    return getUserDocument(user.uid);
-  };
-  
-  const getUserDocument = async uid => {
-    if (!uid) return null;
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+export default firebase.database();
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+export const signInWithGoogle = () => {
+  auth.signInWithPopup(provider);
+};
+
+export const generateUserDocument = async (user, additionalData) => {
+  if (!user) return;
+
+  const userRef = firestore.doc(`users/${user.uid}`);
+  const snapshot = await userRef.get();
+
+  if (!snapshot.exists) {
+    const { email, displayName, photoURL } = user;
     try {
-      const userDocument = await firestore.doc(`users/${uid}`).get();
-  
-      return {
-        uid,
-        ...userDocument.data()
-      };
+      await userRef.set({
+        displayName,
+        email,
+        photoURL,
+        ...additionalData
+      });
     } catch (error) {
-      console.error("Error fetching user", error);
+      console.error("Error creating user document", error);
     }
-  };
-  
+  }
+  return getUserDocument(user.uid);
+};
+
+const getUserDocument = async uid => {
+  if (!uid) return null;
+  try {
+    const userDocument = await firestore.doc(`users/${uid}`).get();
+
+    return {
+      uid,
+      ...userDocument.data()
+    };
+  } catch (error) {
+    console.error("Error fetching user", error);
+  }
+};
