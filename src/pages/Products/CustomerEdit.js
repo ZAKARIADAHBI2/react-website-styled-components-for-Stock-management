@@ -9,10 +9,11 @@ class CustomerEdit extends Component {
 
   emptyCustomer = {
     key: '',
-    firstname: '',
-    lastname: '',
-    age: "",
-    address: ''
+    productname: '',
+    Price: '',
+    Quntite: "",
+    category: '',
+    image : ""
   };
 
   constructor(props) {
@@ -37,10 +38,12 @@ class CustomerEdit extends Component {
     let data = item.val();
     let customer = {
       key: item.key,
-      firstname: data.firstname,
-      lastname: data.lastname,
-      age: data.age,
-      address: data.address
+      productname: data.productname,
+      Price: data.Price,
+      Quntite: data.Quntite,
+      category: data.category,
+      image: data.image
+
     
     };
 
@@ -80,26 +83,31 @@ class CustomerEdit extends Component {
         {title}
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
-            <Label for="firstname">Product name</Label>
-            <Input type="text" name="firstname" id="firstname" value={item.firstname || ''}
-                   onChange={this.handleChange} autoComplete="firstname"/>
+            <Label for="productname">Product name</Label>
+            <Input type="text" name="productname" id="productname" value={item.productname || ''}
+                   onChange={this.handleChange} autoComplete="productname"/>
           </FormGroup>
           <FormGroup>
-            <Label for="lastname">Price</Label>
-            <Input type="text" name="lastname" id="lastname" value={item.lastname || ''}
-                   onChange={this.handleChange} autoComplete="lastname"/>
+            <Label for="Price">Price</Label>
+            <Input type="text" name="Price" id="Price" value={item.Price || ''}
+                   onChange={this.handleChange} autoComplete="Price"/>
           </FormGroup>          
           <FormGroup>
-            <Label for="age">Quntite</Label>
-            <Input type="text" name="age" id="age" value={item.age || ''}
-                   onChange={this.handleChange} autoComplete="age"/>
+            <Label for="Quntite">Quntite</Label>
+            <Input type="text" name="Quntite" id="Quntite" value={item.Quntite || ''}
+                   onChange={this.handleChange} autoComplete="Quntite"/>
           </FormGroup>
           <FormGroup>
-            <Label for="address">categorie</Label>
-            <Input type="text" name="address" id="address" value={item.address || ''}
-                   onChange={this.handleChange} autoComplete="address"/>
+            <Label for="category">category</Label>
+            <Input type="text" name="category" id="category" value={item.category || ''}
+                   onChange={this.handleChange} autoComplete="category"/>
           </FormGroup>
-          
+          <FormGroup>
+            <Label for="image">Product Image:</Label>
+            <Input type="file" name="image" id="image" value={item.image || ''}
+                   onChange={ this.handleChange} autoComplete="image"/>
+          </FormGroup>
+         
           <FormGroup>
             <Button color="primary" type="submit">Save</Button>{' '}
             <Button color="secondary" tag={Link} to="/customers">Cancel</Button>

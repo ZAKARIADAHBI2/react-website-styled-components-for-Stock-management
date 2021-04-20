@@ -28,10 +28,12 @@ class CustomerList extends Component {
       let data = item.val();
       customers.push({
         key: item.key,
-        firstname: data.firstname,
-        lastname: data.lastname,
-        address: data.address,
-        age: data.age,
+        productname: data.productname,
+        Price: data.Price,
+        Quntite: data.Quntite,
+        category: data.category,
+        image: data.image
+  
        
         
       });
@@ -56,10 +58,11 @@ class CustomerList extends Component {
 
     const customerList = customers.map(customer => {
       return <tr key={customer.key}>
-        <td style={{whiteSpace: 'nowrap'}}>{customer.firstname}</td>
-        <td>{customer.lastname}</td>
-        <td>{customer.age}</td>
-        <td>{customer.address}</td>
+        <td style={{whiteSpace: 'nowrap'}}>{customer.productname}</td>
+        <td>{customer.Price}</td>
+        <td>{customer.Quntite}</td>
+        <td>{customer.category}</td>
+         <td>{customer.image}</td>
      
         <td>
           <ButtonGroup>
@@ -84,7 +87,8 @@ class CustomerList extends Component {
                 <th width="20%">product name</th>
                 <th width="20%">price</th>
                 <th width="10%">Quntite</th>
-                <th>categorie</th>
+                <th width="10%">categorie</th>
+                <th width="10%">Products image</th>
                
                 <th width="10%">Actions</th>
               </tr>

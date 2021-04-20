@@ -1,68 +1,66 @@
-export const homeObjOne = {
-  primary: true,
-  lightBg: false,
-  lightTopLine: true,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: 'Marketing Agency',
-  headline: 'Lead Generation Specialist for Online Businesses',
-  description:
-    'We help business owners increase their revenue. Our team of unique specialist can help you achieve your business goals.',
-  buttonLabel: 'Get Started',
-  imgStart: '',
-  img: require('../../images/svg-1.svg'),
-  alt: 'Credit Card',
-  start: ''
-};
+import product1 from '../../images/imgg/product-1.jpg';
+import product2 from '../../images/imgg/product-2.jpg';
+import product3 from '../../images/imgg/product-3.jpg';
+import sweet1 from '../../images/imgg/sweet3.jpg';
+import sweet2 from '../../images/imgg/sweet-2.jpg';
+import sweet3 from '../../images/imgg/sweet-3.jpg';
 
-export const homeObjTwo = {
-  primary: true,
-  lightBg: false,
-  lightTopLine: true,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: 'Instant Setup',
-  headline: 'Extremely quick onboarding process',
-  description:
-    "Once you've joined, our team of specialist will reach out to you and get you set up in minutes.",
-  buttonLabel: 'Learn More',
-  imgStart: '',
-  img: require('../../images/svg-2.svg'),
-  alt: 'Vault',
-  start: ''
-};
+export const productData = [
+  {
+    img: product1,
+    alt: 'Pizza',
+    name: 'Supreme Pizza',
+    desc:
+      'Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto',
+    price: '$19.99',
+    button: 'Add to Cart'
+  },
+  {
+    img: product2,
+    alt: 'Pizza',
+    name: 'Hawaiian Paradise',
+    desc:
+      ' Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto',
+    price: '$16.99',
+    button: 'Add to Cart'
+  },
+  {
+    img: product3,
+    alt: 'Pizza',
+    name: 'Veggie Overload',
+    desc:
+      ' Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto',
+    price: '$14.99',
+    button: 'Add to Cart'
+  }
+];
 
-export const homeObjThree = {
-  primary: false,
-  lightBg: true,
-  lightTopLine: false,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: 'Sarah Jeni',
-  headline:
-    'Ultra helped me increase my revenue by over 3X in less than 3 months!',
-  description:
-    "Their team is wonderful! I can't believe I didn't start working with them earlier.",
-  buttonLabel: 'View Case Study',
-  imgStart: 'start',
-  img: require('../../images/profile.jpg'),
-  alt: 'Vault',
-  start: 'true'
-};
-
-export const homeObjFour = {
-  primary: true,
-  lightBg: false,
-  lightTopLine: true,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: 'Secure Database',
-  headline: 'All your data is stored on our secure server',
-  description:
-    'You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.',
-  buttonLabel: 'Sign Up Now',
-  imgStart: 'start',
-  img: require('../../images/svg-3.svg'),
-  alt: 'Vault',
-  start: 'true'
-};
+export const productDataTwo = [
+  {
+    img: sweet2,
+    alt: 'Donuts',
+    name: 'Doughlicious',
+    desc:
+      'Belgian chocolate glazed donuts covered in icing with sprinkles on top',
+    price: '$9.99',
+    button: 'Add to Cart'
+  },
+  {
+    img: sweet3,
+    alt: 'Ice Cream',
+    name: 'Caramel Wonder',
+    desc:
+      'Vanilla ice cream covered with caramel and chocolate glaze topped with a coco stick',
+    price: '$12.99',
+    button: 'Add to Cart'
+  },
+  {
+    img: sweet1,
+    alt: 'Brownie',
+    name: 'Brownie Bunch',
+    desc:
+      'Double fudge brownie squares topped with white chocolate pieces and macadamia nuts',
+    price: '$9.99',
+    button: 'Add to Cart'
+  }
+];

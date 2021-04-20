@@ -3,14 +3,14 @@ import { InfoSection } from '../../components';
 import { Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import CustomerList from './CustomerList';
-import CustomerEdit from './CustomerEdit';
+import CustomerList from './CategoryList';
+import CustomerEdit from './CategoryEdit';
 
-function Products() {
+function Categories() {
   return (
     <>
        <Container fluid>
-         <CustomerList></CustomerList>
+          <Button color="link"><Link to="/Categories">Manage categories List</Link></Button>
         </Container>
      
     </>
@@ -18,4 +18,4 @@ function Products() {
 }
 
 
-export default Products;
+export default Categories;

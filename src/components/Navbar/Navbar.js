@@ -56,7 +56,7 @@ function Navbar() {
               </NavItem>
               <NavItem>
                 <NavLinks to='/services' onClick={closeMobileMenu}>
-                  Services
+                  Categories
                 </NavLinks>
               </NavItem>
               <NavItem>

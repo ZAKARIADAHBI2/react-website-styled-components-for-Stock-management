@@ -16,6 +16,10 @@ import { Navbar, Footer } from './components';
 
 import CustomerList from './pages/Products/CustomerList';
 import CustomerEdit from './pages/Products/CustomerEdit';
+import CategoryList from './pages/Services/CategoryList';
+import CategoryEdit from './pages/Services/CategoryEdit';
+
+
 
 
 function App() {
@@ -32,6 +36,9 @@ function App() {
        
         <Route path='/customers' exact={true} component={CustomerList}/>
         <Route path='/customers/:key' component={CustomerEdit}/>
+        <Route path='/categories' exact={true} component={CategoryList}/>
+        <Route path='/categories/:key' component={CategoryEdit}/>
+       
         <UserProvider>
       <Application />
       
