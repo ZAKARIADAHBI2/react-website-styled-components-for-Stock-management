@@ -122,3 +122,16 @@ class Home extends Component {
 }
 
 export default Home;
+<div style={styles} class="product-grid">
+                  <div class="product-image">
+                      <a href="#">
+                          <img class="pic-1" src={loogo}/></a>
+                  </div>
+                  <div class="product-content">
+                      <h3 class="title">
+                          <a href="#">{customer.productname}</a>
+                      </h3>
+                      <div class="price">{customer.Price}</div>
+                  </div>
+                
+              </div>
