@@ -5,12 +5,12 @@ import "firebase/firestore";
 
 
 let firebaseConfig = {
-  apiKey: "AIzaSyCpKFRdT76OohQDxLTBZO-4qL_9_iyP6ZQ",
-  authDomain: "reactcrud-aa601.firebaseapp.com",
-  projectId: "reactcrud-aa601",
-  storageBucket: "reactcrud-aa601.appspot.com",
-  messagingSenderId: "344376927878",
-  appId: "1:344376927878:web:351d2ab0cb942ae0b71307"
+  apiKey: "###########################",
+  authDomain: "#####################",
+  projectId: "####################1",
+  storageBucket: "###################",
+  messagingSenderId: "##############"",
+  appId: "#################################""
   };
 
 // Initialize Firebase
